@@ -26,6 +26,8 @@ const GlobalStyle = createGlobalStyle`
 
   main {
     margin-top: 80px;
+    min-height: calc(100vh - 160px);
+    background-color: lime;
   }
 `;
 
