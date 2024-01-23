@@ -1,11 +1,13 @@
+import { Header, Footer } from '../components';
+
 export default function Root() {
   return (
     <div>
-      <header>header component</header>
+      <Header />
       <main>
         <h1>Root Layout Component</h1>
       </main>
-      <footer>Footer component</footer>
+      <Footer />
     </div>
   );
 }
