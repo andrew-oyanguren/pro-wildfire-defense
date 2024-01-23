@@ -1,3 +1,4 @@
+import { HomePage } from '../pages';
 import { Header, Footer } from '../components';
 
 export default function Root() {
@@ -5,7 +6,7 @@ export default function Root() {
     <div>
       <Header />
       <main>
-        <h1>Root Layout Component</h1>
+        <HomePage />
       </main>
       <Footer />
     </div>
