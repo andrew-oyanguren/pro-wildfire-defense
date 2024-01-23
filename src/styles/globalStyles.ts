@@ -23,6 +23,10 @@ const GlobalStyle = createGlobalStyle`
     min-width: 320px;
     min-height: 100vh;
   }
+
+  main {
+    margin-top: 80px;
+  }
 `;
 
 export default GlobalStyle;
