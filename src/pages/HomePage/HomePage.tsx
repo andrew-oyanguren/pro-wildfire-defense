@@ -13,7 +13,7 @@ layout plan:
     title:
     details (p):
 
-  section: info
+  section: intro 
     subtitle:
     details (p):
 

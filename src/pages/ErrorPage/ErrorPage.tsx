@@ -1,4 +1,5 @@
 import { useRouteError, isRouteErrorResponse } from 'react-router-dom';
+import { Button } from '../../components';
 
 export default function ErrorPage() {
   let status = 404;
@@ -15,6 +16,12 @@ export default function ErrorPage() {
     <>
       <h1>{status}</h1>
       <p>{statusText}</p>
+      <Button
+        action={() => console.log('Navigate Home')}
+        size='LARGE'
+        text='Home Page'
+        primary
+      />
     </>
   );
 }
