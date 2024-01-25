@@ -1,13 +1,26 @@
+import { IntroSection, HeroSection } from '../../components/UI';
+
 export default function HomePage() {
   return (
     <div>
-      <h1>Home Page</h1>
+      <HeroSection />
+
+      <IntroSection />
+
+      <section>
+        <h2>Services Section</h2>
+      </section>
+
+      <aside>
+        <h3>Fire Map</h3>
+      </aside>
+
+      <section>Contact Section</section>
     </div>
   );
 }
 
 /*
-
 layout plan:
   section: hero
     title:
