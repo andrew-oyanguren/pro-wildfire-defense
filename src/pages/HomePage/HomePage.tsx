@@ -1,4 +1,9 @@
-import { IntroSection, HeroSection } from '../../components/UI';
+import {
+  ContactSection,
+  FireMap,
+  HeroSection,
+  IntroSection,
+} from '../../components/UI';
 
 export default function HomePage() {
   return (
@@ -7,15 +12,13 @@ export default function HomePage() {
 
       <IntroSection />
 
+      <FireMap />
+
       <section>
         <h2>Services Section</h2>
       </section>
 
-      <aside>
-        <h3>Fire Map</h3>
-      </aside>
-
-      <section>Contact Section</section>
+      <ContactSection />
     </div>
   );
 }
