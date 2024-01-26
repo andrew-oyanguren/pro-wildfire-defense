@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Form } from '../../index';
 
 const StyledContactSection = styled.section`
   background-color: blue;
@@ -9,7 +10,7 @@ export default function ContactSection() {
     <StyledContactSection>
       <div>
         <h3>Get in contact.</h3>
-        <p>Form Placeholder</p>
+        <Form />
       </div>
 
       <div>
