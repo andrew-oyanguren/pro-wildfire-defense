@@ -1,6 +1,7 @@
 import {
   ContactSection,
   FireMap,
+  HazardAssessmentSection,
   HeroSection,
   IntroSection,
 } from '../../components/UI';
@@ -14,9 +15,7 @@ export default function HomePage() {
 
       <FireMap />
 
-      <section>
-        <h2>Services Section</h2>
-      </section>
+      <HazardAssessmentSection />
 
       <ContactSection />
     </div>
