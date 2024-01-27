@@ -1,13 +1,10 @@
-import styled from 'styled-components';
-import { flexCenter } from '../../styles';
 import { useInput } from '../../hooks';
-
-const StyledForm = styled.form`
-  flex-direction: column;
-  ${flexCenter}
-
-  background-color: #eee;
-`;
+import {
+  ErrorMessage,
+  FormControl,
+  StyledForm,
+  SubmitButton,
+} from './Form.styled';
 
 const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
@@ -60,35 +57,52 @@ export default function Form() {
 
   return (
     <StyledForm onSubmit={handleSubmit}>
-      <input
-        onFocus={onFocusName}
-        onChange={onChangeName}
-        onBlur={onBlurName}
-        type='text'
-        name='name'
-        id='name'
-      />
+      <FormControl>
+        {nameHasError ? (
+          <ErrorMessage>Please include your name</ErrorMessage>
+        ) : null}
+        <input
+          onFocus={onFocusName}
+          onChange={onChangeName}
+          onBlur={onBlurName}
+          type='text'
+          name='name'
+          id='name'
+        />
+      </FormControl>
 
-      <input
-        onFocus={onFocusEmail}
-        onChange={onChangeEmail}
-        onBlur={onBlurEmail}
-        type='email'
-        name='email'
-        id='email'
-      />
+      <FormControl>
+        {emailHasError ? (
+          <ErrorMessage>Please include a valid email</ErrorMessage>
+        ) : null}
+        <input
+          onFocus={onFocusEmail}
+          onChange={onChangeEmail}
+          onBlur={onBlurEmail}
+          type='email'
+          name='email'
+          id='email'
+        />
+      </FormControl>
 
-      <textarea
-        onFocus={onFocusMessage}
-        onChange={onChangeMessage}
-        onBlur={onBlurMessage}
-        name='message'
-        id='message'
-        cols={30}
-        rows={10}
-      ></textarea>
+      <FormControl>
+        {messageHasError ? (
+          <ErrorMessage>Please include a message</ErrorMessage>
+        ) : null}
+        <textarea
+          onFocus={onFocusMessage}
+          onChange={onChangeMessage}
+          onBlur={onBlurMessage}
+          name='message'
+          id='message'
+          cols={30}
+          rows={10}
+        ></textarea>
+      </FormControl>
 
-      <button disabled={!inputsTouched || !inputsAreValid}>Send</button>
+      <SubmitButton disabled={!inputsTouched || !inputsAreValid}>
+        Send Message
+      </SubmitButton>
     </StyledForm>
   );
 }
