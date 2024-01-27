@@ -1,20 +1,20 @@
-import { NavLink } from 'react-router-dom';
+import { SECTION_IDS } from '../../constants';
 
 const LINKS_CONFIG = [
   {
-    path: '/home',
-    title: 'Home',
+    sectionId: `#${SECTION_IDS.HERO}`,
+    title: 'Top',
   },
   {
-    path: '/about',
+    sectionId: `#${SECTION_IDS.ABOUT}`,
     title: 'About',
   },
   {
-    path: '/services',
+    sectionId: `#${SECTION_IDS.SERVICES}`,
     title: 'Services',
   },
   {
-    path: '/contact',
+    sectionId: `#${SECTION_IDS.CONTACT}`,
     title: 'Contact',
   },
 ];
@@ -22,10 +22,10 @@ const LINKS_CONFIG = [
 export default function Navigation() {
   return (
     <nav>
-      {LINKS_CONFIG.map(({ path, title }) => (
-        <NavLink key={title} to={path}>
+      {LINKS_CONFIG.map(({ sectionId, title }) => (
+        <a key={title} href={sectionId}>
           {title}
-        </NavLink>
+        </a>
       ))}
     </nav>
   );

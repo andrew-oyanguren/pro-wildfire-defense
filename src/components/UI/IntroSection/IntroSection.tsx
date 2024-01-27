@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { SECTION_IDS } from '../../../constants';
 
 const StyledIntroSection = styled.section`
   background-color: grey;
@@ -6,7 +7,7 @@ const StyledIntroSection = styled.section`
 
 export default function IntroSection() {
   return (
-    <StyledIntroSection>
+    <StyledIntroSection id={SECTION_IDS.ABOUT}>
       <div>
         <p>FIRE ICON PLACEHOLDER</p>
         <p>
