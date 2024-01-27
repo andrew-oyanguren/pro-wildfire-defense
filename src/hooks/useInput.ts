@@ -19,7 +19,9 @@ const useInput = (
     setIsTouched(true);
   };
 
-  const onChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const onChange = (
+    event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
+  ) => {
     console.log('[INPUT] onChange...');
     setValue(event.target.value);
   };
