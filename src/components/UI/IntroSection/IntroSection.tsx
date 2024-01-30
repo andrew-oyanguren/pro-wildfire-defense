@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { SECTION_IDS } from '../../../constants';
+import FlameIcon from '../../../assets/flame.svg';
 
 const StyledIntroSection = styled.section`
   background-color: grey;
@@ -9,7 +10,7 @@ export default function IntroSection() {
   return (
     <StyledIntroSection id={SECTION_IDS.ABOUT}>
       <div>
-        <p>FIRE ICON PLACEHOLDER</p>
+        <img src={FlameIcon} style={{ width: 20 }} />
         <p>
           Our fast-changing environment means higher temperatures and drier
           conditions, creating conditions which are prime for wildfires to

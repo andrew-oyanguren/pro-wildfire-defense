@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 import Navigation from '../Navigation/Navigation';
+import Logo from '../../assets/logo.png';
+
+import Hamburger from '../Hamburger/Hamburger';
 
 const StyledHeader = styled.header`
-  background-color: orange;
+  background-color: brown;
   position: fixed;
   top: 0;
   width: 100vw;
@@ -16,8 +19,8 @@ const StyledHeader = styled.header`
 export default function Header() {
   return (
     <StyledHeader>
-      <p>Logo</p>
-      <Navigation />
+      <img src={Logo} style={{ width: 200 }} />
+      {window.innerWidth > 675 ? <Navigation /> : <Hamburger />}
     </StyledHeader>
   );
 }

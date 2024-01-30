@@ -1,3 +1,4 @@
+import styled from 'styled-components';
 import { SECTION_IDS } from '../../constants';
 
 const LINKS_CONFIG = [
@@ -19,14 +20,20 @@ const LINKS_CONFIG = [
   },
 ];
 
+const StyledNavigation = styled.nav`
+  > * + * {
+    margin-left: 40px;
+  }
+`;
+
 export default function Navigation() {
   return (
-    <nav>
+    <StyledNavigation>
       {LINKS_CONFIG.map(({ sectionId, title }) => (
         <a key={title} href={sectionId}>
           {title}
         </a>
       ))}
-    </nav>
+    </StyledNavigation>
   );
 }
